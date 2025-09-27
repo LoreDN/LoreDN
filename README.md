@@ -1,15 +1,22 @@
 # Hi there 👋
 
 My name is **Lorenzo Di Napoli** and I'm a student in *Computer Science Engineering* at Politecnico di Milano.  
-I'm passionate about programming and building things.  
-<!--
-, in particular I'm looking forward to study Computer Science Applied to Robotics
--->
+I'm passionate about programming and creating things, in particular I'm looking forward to study Computer Science applied to Robotics.
 
 <!--
 ## 🚀 Projects
 - [Movhex](link_alla_repo) → Progetto in C con ottimizzazione tempo/spazio  
 -->
+---
+
+## 🛠️ Technologies & Tools
+![Assembly](https://img.shields.io/badge/-Assembly-6E4C13?style=flat&logo=microchip&logoColor=white)
+![C](https://img.shields.io/badge/-C-00599C?style=flat&logo=c&logoColor=white)
+![C++](https://img.shields.io/badge/-C++-00599C?style=flat&logo=cplusplus&logoColor=white)
+![Git](https://img.shields.io/badge/-Git-F05032?style=flat&logo=git&logoColor=white)
+![LaTeX](https://img.shields.io/badge/-LaTeX-008080?style=flat&logo=latex&logoColor=white)
+![Linux](https://img.shields.io/badge/-Linux-FCC624?style=flat&logo=linux&logoColor=black)
+
 ---
 
 ## 💻 Code Samples
@@ -19,19 +26,14 @@ Feel free to look at my progress and skills in programming with different langua
 - [C](https://github.com/LoreDN/code-C)
 - [C++](https://github.com/LoreDN/code-Cpp)
 
----
-
-## 🛠️ Technologies & Tools
-![C](https://img.shields.io/badge/-C-00599C?style=flat&logo=c&logoColor=white)
-![C++](https://img.shields.io/badge/-C++-00599C?style=flat&logo=cplusplus&logoColor=white)
-![Assembly](https://img.shields.io/badge/-Assembly-6E4C13?style=flat&logo=microchip&logoColor=white)
-![Git](https://img.shields.io/badge/-Git-F05032?style=flat&logo=git&logoColor=white)
-![Linux](https://img.shields.io/badge/-Linux-FCC624?style=flat&logo=linux&logoColor=black)
+Here there is a repository for the LaTeX Markup language, which contains all the documents I have written directly in LaTeX, such as documentations for the other libraries and my personal Curriculum Vitae:
+- [LaTeX](https://github.com/LoreDN/LaTeX) 
 
 ---
 
 ## 📊 GitHub Stats
-![Lorenzo's GitHub stats](https://github-readme-stats.vercel.app/api?username=LoreDN&show_icons=true&theme=tokyonight)  ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=LoreDN&layout=compact&theme=tokyonight)
+![Lorenzo's GitHub stats](https://github-readme-stats.vercel.app/api?username=LoreDN&show_icons=true&theme=tokyonight)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=LoreDN&layout=compact&theme=tokyonight)
 
 ---
 
