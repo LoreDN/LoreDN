@@ -31,12 +31,6 @@ Here there is a repository for the LaTeX Markup language, which contains all the
 
 ---
 
-## 📊 GitHub Stats
-![Lorenzo's GitHub stats](https://github-readme-stats.vercel.app/api?username=LoreDN&show_icons=true&theme=tokyonight)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=LoreDN&layout=compact&theme=tokyonight)
-
----
-
 ## 📫 How to reach me
 - GitHub: [LoreDN](https://github.com/LoreDN)  
 - LinkedIn: [Lorenzo Di Napoli](https://www.linkedin.com/in/lorenzo-di-napoli-38108a340)
