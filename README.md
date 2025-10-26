@@ -13,6 +13,8 @@ I'm passionate about programming and creating things, in particular I'm looking 
 ![Assembly](https://img.shields.io/badge/-Assembly-6E4C13?style=flat&logo=microchip&logoColor=white)
 ![C](https://img.shields.io/badge/-C-00599C?style=flat&logo=c&logoColor=white)
 ![C++](https://img.shields.io/badge/-C++-00599C?style=flat&logo=cplusplus&logoColor=white)
+![Java](https://custom-icon-badges.demolab.com/badge/Java-FFA733.svg?logo=java&logoColor=003366&style=flat)
+<br>
 ![Git](https://img.shields.io/badge/-Git-F05032?style=flat&logo=git&logoColor=white)
 ![LaTeX](https://img.shields.io/badge/-LaTeX-008080?style=flat&logo=latex&logoColor=white)
 ![Linux](https://img.shields.io/badge/-Linux-FCC624?style=flat&logo=linux&logoColor=black)
@@ -22,9 +24,10 @@ I'm passionate about programming and creating things, in particular I'm looking 
 ## 💻 Code Samples
 Here you can explore my practice repositories, in particular some libraries and Data-Structure I implemented while exercising. <br>
 Feel free to look at my progress and skills in programming with different languages:
-- [Assembly](https://github.com/LoreDN/code-asm)
-- [C](https://github.com/LoreDN/code-C)
-- [C++](https://github.com/LoreDN/code-Cpp)
+- [Assembly](https://github.com/LoreDN/asm)
+- [C](https://github.com/LoreDN/C)
+- [C++](https://github.com/LoreDN/Cpp)
+- [Java](https://github.com/LoreDN/Java)
 
 Here there is a repository for the LaTeX Markup language, which contains all the documents I have written directly in LaTeX, such as documentations for the other libraries and my personal Curriculum Vitae:
 - [LaTeX](https://github.com/LoreDN/LaTeX) 
