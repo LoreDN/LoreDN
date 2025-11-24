@@ -3,10 +3,6 @@
 My name is **Lorenzo Di Napoli** and I'm a student in *Computer Science Engineering* at Politecnico di Milano.  
 I'm passionate about programming and creating things, in particular I'm looking forward to study Computer Science applied to Robotics.
 
-<!--
-## 🚀 Projects
-- [Movhex](link_alla_repo) → Progetto in C con ottimizzazione tempo/spazio  
--->
 ---
 
 ## 🛠️ Technologies & Tools
@@ -19,6 +15,11 @@ I'm passionate about programming and creating things, in particular I'm looking 
 ![LaTeX](https://img.shields.io/badge/-LaTeX-008080?style=flat&logo=latex&logoColor=white)
 ![Linux](https://img.shields.io/badge/-Linux-FCC624?style=flat&logo=linux&logoColor=black)
 
+---
+
+## 🚀 Projects
+- [Neural Networks](https://github.com/LoreDN/Neural-Networks) → Implementation of some general Neural Network using **Python** and **Jupyter Nootebook**
+<!-- - [Movhex](link_alla_repo) → Progetto in C con ottimizzazione tempo/spazio  -->
 ---
 
 ## 💻 Code Samples
