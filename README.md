@@ -2,6 +2,9 @@
 
 My name is **Lorenzo Di Napoli** and I'm a student in *Computer Science Engineering* at Politecnico di Milano.  
 I'm passionate about programming and creating things, in particular I'm looking forward to studying Computer Science applied to Robotics.
+<br>
+<br>
+If you want to know more about me and my studies, here you can open directly my Curriculum-Vitae: [CV](https://github.com/LoreDN/LoreDN/blob/main/CV/CV.pdf)
 
 ---
 

@@ -1,0 +1,207 @@
+\documentclass[a4paper, 10pt]{article}
+
+% importazione dei pacchetti
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage[hidelinks]{hyperref}
+
+% settaggio dei margini
+\setlength{\oddsidemargin}{0pt}
+\setlength{\evensidemargin}{0pt}
+\setlength{\topmargin}{0pt}
+\setlength{\headheight}{0pt}
+\setlength{\textwidth}{16cm}
+\setlength{\textheight}{24cm}
+
+% definizione del comando \cvphoto
+\newcommand{\cvphoto}[4]{
+
+    \begin{tikzpicture}[baseline=(pic.base)]
+
+        \clip (0,0) circle (#3/2);
+        \node[inner sep = 0pt] (pic) {
+                
+            \raisebox{-0.45\height}{\includegraphics[width = #3]{#4}}
+                
+        };
+        \draw[line width = #1, draw = #2] (0,0) circle (#3/2);
+
+    \end{tikzpicture}
+
+}
+
+% definizione del comando \cvsection
+\newcommand{\cvsection}[1]{
+
+    \vspace{0.5cm} \par \noindent \rule{\textwidth}{0.5pt} \vspace{-0.75cm}
+    \section*{#1}
+
+}
+
+% definizione dell'enviroment \cvsubsection
+\newsavebox{\cvsubbox}
+\newenvironment{cvsubsection}[2]{
+
+    \vspace{0.5cm} \par \noindent
+    \begin{minipage}{\textwidth}
+
+        \colorbox{#1}{
+
+            \parbox{\textwidth}{\textbf{#2}}
+                        
+        }
+        \begin{lrbox}{\cvsubbox}
+
+            \begin{minipage}{\dimexpr \textwidth - 0.5em \relax}
+
+}{
+    
+            \end{minipage}
+
+        \end{lrbox} \par \noindent
+        \begin{tabular}{ @{} p{0.5em} | p{\dimexpr \textwidth - 0.5em \relax} @{} }
+            
+            &   \usebox{\cvsubbox} \\
+            
+        \end{tabular}
+        
+    \end{minipage} \par
+
+}
+
+% definizione del comando \cvitem 
+\newlength{\cvlabelwidth}
+\newcommand{\cvitem}[2]{
+
+    \par \noindent
+    \settowidth{\cvlabelwidth}{\textbf{#1:} }
+    \hangindent = \cvlabelwidth
+    \hangafter = 1
+    \textbf{#1:} #2 \par \vspace{0.5em}
+    
+}
+
+% inizio del documento
+\begin{document}
+
+    % Intestazione
+    \begin{tabular}{ @{} c c @{} }
+        
+        \cvphoto{5pt}{blue!30}{3.5cm}{CV_Photo.jpg} &
+        \begin{minipage}{\dimexpr \textwidth - 3.5cm \relax}
+            
+            \centering
+            {\Large \textbf{Lorenzo Di Napoli}} \\[0.5em]
+            Data di nascita: 03/12/2004 \quad | \quad Indirizzo: Piazza Bernini 19, Cormano (MI) \\[0.2em]
+            Email: lorenzo\_dinapoli@icloud.com \quad | \quad Tel: \texttt{+39 345 599 2100} \\[0.2em]
+            Studente di Ingegneria Informatica | \texttt{Politecnico di Milano} \\[0.2em]
+            Linkedin: \href{https://www.linkedin.com/in/lorenzo-di-napoli-38108a340}{https://www.linkedin.com/in/lorenzo-di-napoli-38108a340} \\[0.2em]
+            Github: \href{https://github.com/LoreDN}{https://github.com/LoreDN} \\[0.2em]
+
+        \end{minipage} \\
+        
+    \end{tabular} \vspace{0.5cm}
+
+    % Percorso di studi
+    \cvsection{Percorso di Studi}
+
+        \cvitem{2023 - in corso}{Laurea Triennale in Ingegneria Informatica, Politecnico di Milano (MI).}
+        \cvitem{2018 - 2023}{Diploma di Maturità presso Liceo Scientifico opzione Scienze Applicate, Istituto Salesiano Sant'Ambrogio, Milano (MI) --- voto: 71/100.}
+
+    % Competenze tecniche
+    \cvsection{Competenze Tecniche}
+   
+        \vspace{-0.5cm}
+        \begin{cvsubsection}{blue!20}{Linguaggi di Programmazione}
+
+            \cvitem{VHDL}{studio presso corsi universitari, utilizzato in progetti universitari.}
+            \cvitem{Assembly RISC-V64 / x86\_64}{studio presso corsi universitari, utilizzato in progetti personali.}
+            \cvitem{C}{studio presso corsi universitari, utilizzato in progetti universitari e personali.}
+            \cvitem{C++}{studio autonomo a partire da base universitaria del linguaggio C, utilizzato in progetti personali.}
+            \cvitem{Cuda}{studio presso corso universitario extra-curriculare, utilizzato in progetti universitari.}            
+            \cvitem{Java}{studio presso corsi universitari, utilizzato in progetti universitari e personali.}
+            \cvitem{Python}{studio presso corsi universitari, utilizzato in progetti universitari e personali.}
+
+        \end{cvsubsection}
+        
+        \begin{cvsubsection}{blue!20}{Conoscenze Tecniche e Informatiche a partire da corsi universitari curricolari}
+        
+            \cvitem{Sistemi Operativi (Linux)}{conoscenza di base di Linux, gestione di processi e threads, principi di paginazione, memoria virtuale e filesystem.}
+            \cvitem{Algoritmi e Strutture Dati}{conoscenza di strutture dati come array, heap, liste, Hash-Tables, alberi (BST, RBT, ...) e grafi.
+                Implementazione di algoritmi di ordinamento e ricerca, tecniche di progettazione algoritmica (divide et impera, greedy, programmazione dinamica).}
+            \cvitem{Architettura dei Calcolatori}{conoscenza dialettica Assembly (ISA RISC-V32), funzionamento CPU e pipelining, gerarchia di memoria.}
+            \cvitem{Fondamenti di Comunicazione e Internet}{conoscenza dell'Architettura TCP/IP e dei principali protocolli di rete (HTTP, FTP, DNS, UDP, TCP, IP), indirizzamento IPv4 / IPv6, subnetting.}
+        
+        \end{cvsubsection}
+
+        \begin{cvsubsection}{blue!20}{Conoscenza tecniche e informatiche a partire da corsi universitari extra-curriculari}
+
+            \cvitem{Architettura GPU (CUDA)}{conoscenza dell'architettura GPU, programmazione parallela con CUDA, ottimizzazione della struttura a blocchi / threads.}
+            \cvitem{Architettura FPGA (VHDL e HLS)}{conoscenza dell'Architettura FPGA, progettazione Hardware (VHDL) e High-Level Synthesis (HLS) con C/C++.}
+            %\cvitem{Python per Data Science e AI}{programmazione in Python applicata a Data Science e Intelligenza Artificiale (in particolare Reti Neurali).}
+    
+        \end{cvsubsection}
+        
+        \begin{cvsubsection}{blue!20}{Strumenti e tecnologie di supporto}
+
+            \cvitem{Git}{conoscenza di Git, utilizzo per il versionamento del codice, conoscenza di base di GitHub.}
+            \cvitem{Makefile, CMake}{utilizzati come strumenti per compilazione avanzata di progetti in C/C++.}
+            \cvitem{Valgrind, Cachegrind, Massif, GDB}{utilizzo di strumenti di supporto per debug avanzato del codice C/C++ in ambiente Linux.}
+            \cvitem{LaTeX, Doxygen}{utilizzo di LaTeX (manuale/generato via Doxygen) come strumento per la scrittura di documentazioni e report (come questo CV).}
+            \cvitem{Vivado e Vitis}{utilizzo degli strumenti Vivado e Vitis per la sintesi (VHDL e HLS) e la simulazione di progetti su Architettura FPGA.}
+            \cvitem{Docker, Podman}{creazione e gestione di Container mediante Docker/Podman, utilizzati come ambienti isolati e toolchain.}
+
+        \end{cvsubsection}
+
+    % Esperienze lavorative
+    \cvsection{Esperienze lavorative e Progetti}
+
+        \vspace{-0.5cm}
+        \begin{cvsubsection}{blue!20}{Progetti universitari}
+
+            \cvitem{Movhex}{sviluppo di un programma che consente di creare e modificare una mappa esagonale 2D, con l'obiettivo di trovare il percorso a minor costo tra due punti di essa.
+                Il progetto è stato completamente implementato in C, utilizzando e adattando conoscenze apprese seguendo il corso di \textit{"Algoritmi e Strutture Dati"} del Politecnico di Milano.}
+                
+        \end{cvsubsection}
+            
+        \begin{cvsubsection}{blue!20}{Progetti personali}
+                
+            \cvitem{\underline{\href{https://github.com/LoreDN/Cpp}{LDN Library}}}{libreria personale general purpose implementata in C++20.}
+            \cvitem{\underline{\href{https://github.com/LoreDN/Neural-Networks}{Neural Networks}}}{implementazione from-scratch di differenti reti neurali in Python, incentrate sul clustering di diverse figure geometriche (cerchi, spirali, ecc.).}
+
+        \end{cvsubsection}
+
+        \begin{cvsubsection}{blue!20}{Esperienze lavorative}
+
+            \cvitem{Assistente Bagnanti}{Abilitazione al primo soccorso e all'uso del defibrillatore (BLSD), responsabilità civile e penale delle proprie azioni e di quelle dei bagnanti.}
+                \begin{itemize}
+
+                    \renewcommand{\labelitemi}{-}
+                    \item \textbf{giugno 2025 - dicembre 2025 [116 ore]:} esperienza lavorativa estiva e invernale come Assistente Bagnanti P, svolta presso il centro sportivo \textit{"M.G.M.Sport Srl"} di Paderno Dugnano (MI).
+                    \item \textbf{giugno 2024 - luglio 2024 [171 ore]:} esperienza lavorativa estiva come Assistente Bagnanti P, svolta presso il centro sportivo \textit{"M.G.M.Sport Srl"} di Paderno Dugnano (MI).
+                    \item \textbf{luglio 2022 [36.5 ore]:} esperienza lavorativa estiva come Assistente Bagnanti P, svolta presso il centro sportivo \textit{"M.G.M. Sport Srl"} di Desio (MB). 
+            
+                \end{itemize}
+
+        \end{cvsubsection}
+
+    % Conoscenze linguistiche
+    \pagebreak
+    \cvsection{Conoscenze Linguistiche}
+
+        \cvitem{Italiano}{Madrelingua.}
+        \cvitem{Inglese}{Livello B2, Grado C (Certificazione FIRST Cambridge).}
+    
+    % Certificazioni e Documenti
+    \cvsection{Certificazioni e Documenti {\normalsize ---> \underline{\href{https://github.com/LoreDN/LoreDN/raw/main/CV/Certifications.zip}{DOWNLOAD}}}}
+
+        \cvitem{Patente di guida}{Patente di guida di tipo B --- [18/11/2023]}
+        \cvitem{Certificazione FIRST Cambridge}{Certificazione di lingua inglese, livello B2 Grado C --- [19/05/2022]}
+        \cvitem{Brevetto di Assistente Bagnanti}{conseguimento del brevetto di Assistente Bagnanti (livelli P, IP, MIP) presso \textit{"Federazione Italiana Nuoto" (FIN)} --- [09/11/2022]}
+        \cvitem{Attestato SFA}{attestato di partecipazione e superamento della \textit{"Scuola Formazione Animatori MGS" (SFA)} presso l'associazione \textit{"Movimento Giovanile Salesiano" (MGS)} --- [17/04/2023]}
+
+\end{document}
