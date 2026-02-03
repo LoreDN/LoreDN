@@ -1,0 +1,206 @@
+\documentclass[a4paper, 10pt]{article}
+
+% package imports
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage[hidelinks]{hyperref}
+
+% page margin settings
+\setlength{\oddsidemargin}{0pt}
+\setlength{\evensidemargin}{0pt}
+\setlength{\topmargin}{0pt}
+\setlength{\headheight}{0pt}
+\setlength{\textwidth}{16cm}
+\setlength{\textheight}{24cm}
+
+% definition of the \cvphoto command
+\newcommand{\cvphoto}[4]{
+
+    \begin{tikzpicture}[baseline=(pic.base)]
+
+        \clip (0,0) circle (#3/2);
+        \node[inner sep = 0pt] (pic) {
+                
+            \raisebox{-0.45\height}{\includegraphics[width = #3]{#4}}
+                
+        };
+        \draw[line width = #1, draw = #2] (0,0) circle (#3/2);
+
+    \end{tikzpicture}
+
+}
+
+% definition of the \cvsection command
+\newcommand{\cvsection}[1]{
+
+    \vspace{0.5cm} \par \noindent \rule{\textwidth}{0.5pt} \vspace{-0.75cm}
+    \section*{#1}
+
+}
+
+% definition of the \cvsubsection environment
+\newsavebox{\cvsubbox}
+\newenvironment{cvsubsection}[2]{
+
+    \vspace{0.5cm} \par \noindent
+    \begin{minipage}{\textwidth}
+
+        \colorbox{#1}{
+
+            \parbox{\textwidth}{\textbf{#2}}
+                        
+        }
+        \begin{lrbox}{\cvsubbox}
+
+            \begin{minipage}{\dimexpr \textwidth - 0.5em \relax}
+
+}{
+    
+            \end{minipage}
+
+        \end{lrbox} \par \noindent
+        \begin{tabular}{ @{} p{0.5em} | p{\dimexpr \textwidth - 0.5em \relax} @{} }
+            
+            &   \usebox{\cvsubbox} \\
+            
+        \end{tabular}
+        
+    \end{minipage} \par
+
+}
+
+% definition of the \cvitem command 
+\newlength{\cvlabelwidth}
+\newcommand{\cvitem}[2]{
+
+    \par \noindent
+    \settowidth{\cvlabelwidth}{\textbf{#1:} }
+    \hangindent = \cvlabelwidth
+    \hangafter = 1
+    \textbf{#1:} #2 \par \vspace{0.5em}
+    
+}
+
+% start of document
+\begin{document}
+
+    % Header
+    \begin{tabular}{ @{} c c @{} }
+        
+        \cvphoto{5pt}{blue!30}{3.5cm}{CV_Photo.jpg} &
+        \begin{minipage}{\dimexpr \textwidth - 3.5cm \relax}
+            
+            \centering
+            {\Large \textbf{Lorenzo Di Napoli}} \\[0.5em]
+            Birth Date: 03/12/2004 \quad | \quad Address: Piazza Bernini 19, Cormano (MI) \\[0.2em]
+            Email: lorenzo\_dinapoli@icloud.com \quad | \quad Tel: \texttt{+39 345 599 2100} \\[0.2em]
+            Student of Computer Science and Engineering | \texttt{Politecnico di Milano} \\[0.2em]
+            Linkedin: \href{https://www.linkedin.com/in/lorenzo-di-napoli-38108a340}{https://www.linkedin.com/in/lorenzo-di-napoli-38108a340} \\[0.2em]
+            Github: \href{https://github.com/LoreDN}{https://github.com/LoreDN} \\[0.2em]
+
+        \end{minipage} \\
+        
+    \end{tabular} \vspace{0.5cm}
+
+    % Educational Path
+    \cvsection{Educational Path}
+
+        \cvitem{2023 - present}{Bachelor's Degree in Computer Science and Engineering, Politecnico di Milano (MI).}
+        \cvitem{2018 - 2023}{High School Diploma, in Liceo Scientifico opzione Scienze Applicate, Istituto Salesiano Sant'Ambrogio, Milano (MI) --- grade: 71/100.}
+
+    % Technical Skills
+    \cvsection{Technical Skills}
+   
+        \vspace{-0.5cm}
+        \begin{cvsubsection}{blue!20}{Programming Languages}
+
+            \cvitem{VHDL}{studied in university courses, used in university projects.}
+            \cvitem{Assembly RISC-V64 / x86\_64}{studied in university courses, used in personal projects.}
+            \cvitem{C}{studied in university courses, used in university and personal projects.}
+            \cvitem{C++}{self-study starting from university basis of C, used in personal projects.}
+            \cvitem{Cuda}{studied in an extra-curricular university course, used in university projects.}            
+            \cvitem{Java}{studied in university courses, used in university and personal projects.}
+            \cvitem{Python}{studied in university courses, used in university and personal projects.}
+        \end{cvsubsection}
+        
+        \begin{cvsubsection}{blue!20}{Technical and Informatics Knowledge from Curricular University Courses}
+        
+            \cvitem{Operating Systems (Linux)}{basic knowledge of Linux, process and thread management, paging principles, virtual memory and file systems.}
+            \cvitem{Algorithms and Data Structures}{knowledge of data structures such as arrays, heaps, lists, hash tables, trees (BST, RBT, ...) and graphs.
+                Implementation of sorting and search algorithms, algorithm design techniques (divide et impera, greedy, dynamic programming).}
+            \cvitem{Computer Architecture}{knowledge of Assembly dialect (ISA RISC-V32), CPU operation and pipelining, memory hierarchy.}
+            \cvitem{Fundamentals of Communication and Internet}{knowledge of the TCP/IP architecture and main network protocols (HTTP, FTP, DNS, UDP, TCP, IP), IPv4/IPv6 addressing, subnetting.}
+        
+        \end{cvsubsection}
+
+        \begin{cvsubsection}{blue!20}{Technical and Informatics Knowledge from Extra-Curricular University Courses}
+
+            \cvitem{GPU Architecture (CUDA)}{knowledge of GPU architecture, parallel programming with CUDA, optimization of block/thread structure.}
+            \cvitem{FPGA Architecture (VHDL and HLS)}{knowledge of FPGA architecture, hardware design (VHDL) and High-Level Synthesis (HLS) via C/C++.}
+            %\cvitem{Python for Data Science and AI}{Python programming applied to Data Science and Artificial Intelligence (in particular Neural Networks).}
+    
+        \end{cvsubsection}
+        
+        \begin{cvsubsection}{blue!20}{Tools and Supporting Technologies}
+
+            \cvitem{Git}{knowledge of Git, use for code versioning, basic knowledge of GitHub.}
+            \cvitem{Makefile, CMake}{used as tools for advanced compilation of C/C++ projects.}
+            \cvitem{Valgrind, Cachegrind, Massif, GDB}{use of support tools for advanced debugging of C/C++ code in Linux.}
+            \cvitem{LaTeX, Doxygen}{use of LaTeX (manual/generated via Doxygen) as a tool for writing documentation and reports (such as this CV).}
+            \cvitem{Vivado and Vitis}{use of Vivado and Vitis tools for synthesis (VHDL and HLS) and simulation of FPGA architecture projects.}
+            \cvitem{Docker, Podman}{creation and management of Containers using Docker/Podman, used as isolated environments and toolchains.}
+
+        \end{cvsubsection}
+
+    % Work Experience and Projects
+    \cvsection{Work Experience and Projects}
+
+        \vspace{-0.5cm}
+        \begin{cvsubsection}{blue!20}{University Projects}
+
+            \cvitem{Movhex}{development of a program that allows creating and editing a 2D hexagonal map, with the objective of finding the lowest-cost path between two points.
+                The project was fully implemented in C, using and adapting knowledge learned in the course \textit{"Algorithms and Data Structures"} at Politecnico di Milano.}
+                
+        \end{cvsubsection}
+            
+        \begin{cvsubsection}{blue!20}{Personal Projects}
+                
+            \cvitem{\underline{\href{https://github.com/LoreDN/Cpp}{LDN Library}}}{personal general-purpose library implemented in C++20.}
+            \cvitem{\underline{\href{https://github.com/LoreDN/Neural-Networks}{Neural Networks}}}{from-scratch implementation of different neural networks in Python, focused on clustering various geometric shapes (circles, spirals, etc.).}
+
+        \end{cvsubsection}
+
+        \begin{cvsubsection}{blue!20}{Work Experience}
+
+            \cvitem{Lifeguard}{First aid and defibrillator (BLSD) certification, civil and criminal liability for one's actions and those of swimmers.}
+                \begin{itemize}
+
+                    \renewcommand{\labelitemi}{-}
+                    \item \textbf{June 2025 - December 2025 [116 hours]:} Summer and winter work experience as Lifeguard Assistant P at the sports center \textit{"M.G.M.Sport Srl"} in Paderno Dugnano (MI).
+                    \item \textbf{June 2024 - July 2024 [171 hours]:} Summer work experience as Lifeguard Assistant P at the sports center \textit{"M.G.M.Sport Srl"} in Paderno Dugnano (MI).
+                    \item \textbf{July 2022 [36.5 hours]:} Summer work experience as Lifeguard Assistant P at the sports center \textit{"M.G.M. Sport Srl"} in Desio (MB). 
+            
+                \end{itemize}
+
+        \end{cvsubsection}
+
+    % Language Skills
+    \pagebreak
+    \cvsection{Language Skills}
+
+        \cvitem{Italian}{Native speaker.}
+        \cvitem{English}{Level B2, Grade C (Cambridge FIRST Certificate).}
+    
+    % Certifications and Documents
+    \cvsection{Certifications and Documents {\normalsize ---> \underline{\href{https://github.com/LoreDN/LoreDN/raw/main/CV/Certifications.zip}{DOWNLOAD}}}}
+
+        \cvitem{Driver's License}{Category B driver's license --- [18/11/2023]}
+        \cvitem{Cambridge FIRST Certificate}{English language certification, level B2 Grade C --- [19/05/2022]}
+        \cvitem{Lifeguard Certification}{award of the Lifeguard Assistant certificate (levels P, IP, MIP) at the \textit{"Federazione Italiana Nuoto" (FIN)} --- [09/11/2022]}
+        \cvitem{SFA Certificate}{certificate of participation and completion of the \textit{"Scuola Formazione Animatori MGS" (SFA)} at the association \textit{"Movimento Giovanile Salesiano" (MGS)} --- [17/04/2023]}
+
+\end{document}
