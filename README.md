@@ -27,9 +27,9 @@ If you want to know more about me and my studies, here you can open directly my 
 ---
 
 ## 🚀 Projects
+- [Movhex](https://github.com/LoreDN/Movhex) → Implementation and Optimization of a Search Algorithm on an Exagonal Map using **C**
 - [C++ - LDN Library](https://github.com/LoreDN/Cpp) → C++ Library for general programming
 - [Neural Networks](https://github.com/LoreDN/Neural-Networks) → Implementation of some general Neural Networks using **Python** and **Jupyter Nootebook**
-<!-- - [Movhex](link_alla_repo) → Progetto in C con ottimizzazione tempo/spazio  -->
 ---
 
 ## 💻 Code Samples
