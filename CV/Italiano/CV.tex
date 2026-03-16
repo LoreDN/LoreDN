@@ -85,10 +85,27 @@
     
 }
 
+% definizione del comando \skill
+\newcommand{\skill}[2]{
+
+  \textbf{#1} \hfill
+  \foreach \i in {1,...,5}{
+    \begin{tikzpicture}[baseline=-0.5ex]
+      \ifnum \i > #2
+        \draw[gray!40, fill=gray!10] (0,0) circle (0.3ex);
+      \else
+        \draw[gray!70, fill=gray!70] (0,0) circle (0.3ex);
+      \fi
+    \end{tikzpicture}
+  }
+
+}
+
 % inizio del documento
 \begin{document}
 
     % Intestazione
+    \hspace{-1 cm}
     \begin{tabular}{ @{} c c @{} }
         
         \cvphoto{5pt}{blue!30}{3.5cm}{CV_Photo.jpg} &
@@ -104,74 +121,107 @@
 
         \end{minipage} \\
         
-    \end{tabular} \vspace{0.5cm}
+    \end{tabular} \vspace{0.25cm}
+
+    % Introduzione Personale
+    \cvsection{Introduzione Personale}
+
+        Studente di Ingegneria Informatica al Politecnico di Milano (media: 26.11/30), con competenze in programmazione low-level (\textit{VHDL · Assembly Risc-V · C · C++ · CUDA}) 
+        e interesse per sistemi embedded e robotica. Orientato alla comprensione profonda dei sistemi, e dell'influenza che l'architettura hardware esercita sul software applicativo.
 
     % Percorso di studi
     \cvsection{Percorso di Studi}
 
-        \cvitem{2023 - in corso}{Laurea Triennale in Ingegneria Informatica, Politecnico di Milano (MI).}
-        \cvitem{2018 - 2023}{Diploma di Maturità presso Liceo Scientifico opzione Scienze Applicate, Istituto Salesiano Sant'Ambrogio, Milano (MI) --- voto: 71/100.}
+        \cvitem{2023 - previsto 2026}{Laurea Triennale in Ingegneria Informatica, Politecnico di Milano (MI) --- media attuale: 26.11/30.}
+        \cvitem{Corsi Extracurriculari}{Architettura GPU (CUDA) · Architettura FPGA (VHDL \& HLS)}
+        \cvitem{2018 - 2023}{Diploma di Maturità presso Liceo Scientifico opzione Scienze Applicate, Istituto Salesiano Sant'Ambrogio, Milano (MI).}
 
-    % Competenze tecniche
-    \cvsection{Competenze Tecniche}
+    % Competenze Tecniche & Soft Skills
+    \cvsection{Competenze Tecniche \& Soft Skills}
    
         \vspace{-0.5cm}
         \begin{cvsubsection}{blue!20}{Linguaggi di Programmazione}
 
-            \cvitem{VHDL}{studio presso corsi universitari, utilizzato in progetti universitari.}
-            \cvitem{Assembly RISC-V64 / x86\_64}{studio presso corsi universitari, utilizzato in progetti personali.}
-            \cvitem{C}{studio presso corsi universitari, utilizzato in progetti universitari e personali.}
-            \cvitem{C++}{studio autonomo a partire da base universitaria del linguaggio C, utilizzato in progetti personali.}
-            \cvitem{Cuda}{studio presso corso universitario extra-curriculare, utilizzato in progetti universitari.}            
-            \cvitem{Java}{studio presso corsi universitari, utilizzato in progetti universitari e personali.}
-            \cvitem{Python}{studio presso corsi universitari, utilizzato in progetti universitari e personali.}
+            \begin{minipage}[t]{0.2\textwidth}
+                \skill{C/C++}{5}
+                \skill{Java}{4}
+            \end{minipage}
+            \hspace{1 cm}
+            \begin{minipage}[t]{0.2\textwidth}
+                \skill{Cuda}{2}
+                \skill{Python}{2}
+            \end{minipage}
+            \hspace{1 cm}
+            \begin{minipage}[t]{0.25\textwidth}
+                \skill{Assembly}{3}
+                \skill{VHDL}{3}
+            \end{minipage}
 
-        \end{cvsubsection}
-        
-        \begin{cvsubsection}{blue!20}{Conoscenze Tecniche e Informatiche a partire da corsi universitari curricolari}
-        
-            \cvitem{Sistemi Operativi (Linux)}{conoscenza di base di Linux, gestione di processi e threads, principi di paginazione, memoria virtuale e filesystem.}
-            \cvitem{Algoritmi e Strutture Dati}{conoscenza di strutture dati come array, heap, liste, Hash-Tables, alberi (BST, RBT, ...) e grafi.
-                Implementazione di algoritmi di ordinamento e ricerca, tecniche di progettazione algoritmica (divide et impera, greedy, programmazione dinamica).}
-            \cvitem{Architettura dei Calcolatori}{conoscenza dialettica Assembly (ISA RISC-V32), funzionamento CPU e pipelining, gerarchia di memoria.}
-            \cvitem{Fondamenti di Comunicazione e Internet}{conoscenza dell'Architettura TCP/IP e dei principali protocolli di rete (HTTP, FTP, DNS, UDP, TCP, IP), indirizzamento IPv4 / IPv6, subnetting.}
-        
-        \end{cvsubsection}
-
-        \begin{cvsubsection}{blue!20}{Conoscenza tecniche e informatiche a partire da corsi universitari extra-curriculari}
-
-            \cvitem{Architettura GPU (CUDA)}{conoscenza dell'architettura GPU, programmazione parallela con CUDA, ottimizzazione della struttura a blocchi / threads.}
-            \cvitem{Architettura FPGA (VHDL e HLS)}{conoscenza dell'Architettura FPGA, progettazione Hardware (VHDL) e High-Level Synthesis (HLS) con C/C++.}
-            %\cvitem{Python per Data Science e AI}{programmazione in Python applicata a Data Science e Intelligenza Artificiale (in particolare Reti Neurali).}
-    
         \end{cvsubsection}
         
         \begin{cvsubsection}{blue!20}{Strumenti e tecnologie di supporto}
 
-            \cvitem{Git}{conoscenza di Git, utilizzo per il versionamento del codice, conoscenza di base di GitHub.}
-            \cvitem{Makefile, CMake}{utilizzati come strumenti per compilazione avanzata di progetti in C/C++.}
-            \cvitem{Valgrind, Cachegrind, Massif, GDB}{utilizzo di strumenti di supporto per debug avanzato del codice C/C++ in ambiente Linux.}
-            \cvitem{LaTeX, Doxygen}{utilizzo di LaTeX (manuale/generato via Doxygen) come strumento per la scrittura di documentazioni e report (come questo CV).}
-            \cvitem{Vivado e Vitis}{utilizzo degli strumenti Vivado e Vitis per la sintesi (VHDL e HLS) e la simulazione di progetti su Architettura FPGA.}
-            \cvitem{Docker, Podman}{creazione e gestione di Container mediante Docker/Podman, utilizzati come ambienti isolati e toolchain.}
+            \begin{minipage}[t]{0.3\textwidth}
+                \begin{itemize}
+                    \item Linux (Ubuntu, Fedora)
+                    \item Makefile · CMake
+                    \item Docker/Podman
+                \end{itemize}
+            \end{minipage}
+            \hspace{1 cm}
+            \begin{minipage}[t]{0.525\textwidth}
+                \begin{itemize}
+                    \item Git · GitHub
+                    \item Valgrind · Cachegrind · Massif · GDB
+                    \item Vivado · Vitis
+                \end{itemize}
+            \end{minipage}
 
+        \end{cvsubsection}
+        
+        \begin{cvsubsection}{blue!20}{Soft Skills da Esperienze Lavorative}
+
+            \begin{itemize}
+                \item Comunicazione efficace e lavoro di squadra
+                \item Gestione dell'emergenza e decision-making sotto pressione
+                \item Presa della Responsabilità Civile e Penale delle proprie azioni e di quelle altrui
+                \item Supervisione e Gestione della sicurezza dei clienti
+                \item Abilitazione al Primo Soccorso (BLSD)
+            \end{itemize}
+
+        \end{cvsubsection}
+        
+        \begin{cvsubsection}{blue!20}{Conoscenze Tecniche a partire da corsi universitari}
+    
+            Architettura dei Calcolatori (RISC-V ) · Reti Logiche · Sistemi Operativi (Linux) \\[0.2 em]
+            Algoritmi e Principi dell'Informatica · Ingegneria del Software \\ [0.2 em]
+            Fondamenti di Comunicazione e Internet · Database e Sistemi Informativi \\[0.2 em]
+            Elettrotecnica · Fondamenti di Elettronica · Fondamenti di Automatica \\[0.4 em]
+
+            Architettura GPU (CUDA) · Architettura FPGA (VHDL \& HLS) \\[0.2 em]
+    
         \end{cvsubsection}
 
     % Esperienze lavorative
     \cvsection{Esperienze lavorative e Progetti}
 
-        \vspace{-0.5cm}
         \begin{cvsubsection}{blue!20}{Progetti universitari}
 
-            \cvitem{Movhex}{sviluppo di un programma che consente di creare e modificare una mappa esagonale 2D, con l'obiettivo di trovare il percorso a minor costo tra due punti di essa.
-                Il progetto è stato completamente implementato in C, utilizzando e adattando conoscenze apprese seguendo il corso di \textit{"Algoritmi e Strutture Dati"} del Politecnico di Milano.}
+            \vspace{0.25 cm}
+            \cvitem{\underline{\href{https://github.com/LoreDN/Movhex}{Movhex}}}{sviluppo in \textbf{C} di un programma che consente di creare e modificare una mappa esagonale 2D, con l'obiettivo di trovare il percorso a 
+                minor costo tra due punti di essa. \\[0.2 em]
+                Il risultato finale ha raggiunto una complessità temporale di $O(n \log (n))$ e spaziale di $O(n)$; dove $n$ è il numero di esagoni presenti nella mappa.}
+            \vspace{0.25 cm}
+                \cvitem{Priority-List}{design ed implementazione in \textbf{VHDL} di un modulo HW, il quale svolge la funzione di controllore per una Lista con priorità di Task. \\[0.2 em]
+                Il risultato finale è stato implementato mediante una FSM totalmente sintetizzabile su FPGA senza Latch.}
                 
         \end{cvsubsection}
             
         \begin{cvsubsection}{blue!20}{Progetti personali}
                 
-            \cvitem{\underline{\href{https://github.com/LoreDN/Cpp}{LDN Library}}}{libreria personale general purpose implementata in C++20.}
-            \cvitem{\underline{\href{https://github.com/LoreDN/Neural-Networks}{Neural Networks}}}{implementazione from-scratch di differenti reti neurali in Python, incentrate sul clustering di diverse figure geometriche (cerchi, spirali, ecc.).}
+            \cvitem{\underline{\href{https://github.com/LoreDN/Cpp}{LDN Library}}}{libreria personale general purpose, implementata in \textbf{C++20} sfruttando le funzionalità avanzate del linguaggio.}
+            \cvitem{\underline{\href{https://github.com/LoreDN/Neural-Networks}{Neural Networks}}}{implementazione from-scratch di differenti reti neurali in Python, incentrate sul clustering di diverse figure geometriche 
+                (cerchi, spirali, ecc.).}
 
         \end{cvsubsection}
 
@@ -190,17 +240,16 @@
         \end{cvsubsection}
 
     % Conoscenze linguistiche
-    \pagebreak
     \cvsection{Conoscenze Linguistiche}
 
         \cvitem{Italiano}{Madrelingua.}
-        \cvitem{Inglese}{Livello B2, Grado C (Certificazione FIRST Cambridge).}
+        \cvitem{Inglese}{Livello C1, Grado C (Certificazione CAE Cambridge).}
     
     % Certificazioni e Documenti
     \cvsection{Certificazioni e Documenti {\normalsize ---> \underline{\href{https://github.com/LoreDN/LoreDN/raw/main/CV/Certifications.zip}{DOWNLOAD}}}}
 
         \cvitem{Patente di guida}{Patente di guida di tipo B --- [18/11/2023]}
-        \cvitem{Certificazione FIRST Cambridge}{Certificazione di lingua inglese, livello B2 Grado C --- [19/05/2022]}
+        \cvitem{Certificazione CAE Cambridge}{Certificazione di lingua inglese, livello C1 Grado C --- [09/01/2026]}
         \cvitem{Brevetto di Assistente Bagnanti}{conseguimento del brevetto di Assistente Bagnanti (livelli P, IP, MIP) presso \textit{"Federazione Italiana Nuoto" (FIN)} --- [09/11/2022]}
         \cvitem{Attestato SFA}{attestato di partecipazione e superamento della \textit{"Scuola Formazione Animatori MGS" (SFA)} presso l'associazione \textit{"Movimento Giovanile Salesiano" (MGS)} --- [17/04/2023]}
 

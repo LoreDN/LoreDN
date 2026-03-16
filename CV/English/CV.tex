@@ -85,10 +85,27 @@
     
 }
 
+% definition of the \skill command
+\newcommand{\skill}[2]{
+
+  \textbf{#1} \hfill
+  \foreach \i in {1,...,5}{
+    \begin{tikzpicture}[baseline=-0.5ex]
+      \ifnum \i > #2
+        \draw[gray!40, fill=gray!10] (0,0) circle (0.3ex);
+      \else
+        \draw[gray!70, fill=gray!70] (0,0) circle (0.3ex);
+      \fi
+    \end{tikzpicture}
+  }
+
+}
+
 % start of document
 \begin{document}
 
     % Header
+    \hspace{-1 cm}
     \begin{tabular}{ @{} c c @{} }
         
         \cvphoto{5pt}{blue!30}{3.5cm}{CV_Photo.jpg} &
@@ -98,7 +115,7 @@
             {\Large \textbf{Lorenzo Di Napoli}} \\[0.5em]
             Birth Date: 03/12/2004 \quad | \quad Address: Piazza Bernini 19, Cormano (MI) \\[0.2em]
             Email: lorenzo\_dinapoli@icloud.com \quad | \quad Tel: \texttt{+39 345 599 2100} \\[0.2em]
-            Student of Computer Science and Engineering | \texttt{Politecnico di Milano} \\[0.2em]
+            Student of Engineering of Computing Systems | \texttt{Politecnico di Milano} \\[0.2em]
             Linkedin: \href{https://www.linkedin.com/in/lorenzo-di-napoli-38108a340}{https://www.linkedin.com/in/lorenzo-di-napoli-38108a340} \\[0.2em]
             Github: \href{https://github.com/LoreDN}{https://github.com/LoreDN} \\[0.2em]
 
@@ -106,75 +123,109 @@
         
     \end{tabular} \vspace{0.5cm}
 
+    % Personal Introduction
+    \cvsection{Personal Introduction}
+
+        Student of Engineering of Computing Systems at Politecnico di Milano (Grade Average: 26.11/30), with skills in low-level programming (\textit{VHDL · Assembly Risc-V · C · C++ · CUDA}) 
+        and interest in embedded systems and robotics. Focused on understanding systems deeply and the influence of hardware architecture on software applications.
+
     % Educational Path
     \cvsection{Educational Path}
 
-        \cvitem{2023 - present}{Bachelor's Degree in Computer Science and Engineering, Politecnico di Milano (MI).}
-        \cvitem{2018 - 2023}{High School Diploma, in Liceo Scientifico opzione Scienze Applicate, Istituto Salesiano Sant'Ambrogio, Milano (MI) --- grade: 71/100.}
+        \cvitem{2023 - expected 2026}{Bachelor's Degree in Engineering of Computing Systems, Politecnico di Milano (MI) -- Grade Average: 26.11/30.}
+        \cvitem{Extracurricular Courses}{GPU Architecture (CUDA) · FPGA Architecture (VHDL \& HLS)}
+        \cvitem{2018 - 2023}{High School Diploma, in Liceo Scientifico opzione Scienze Applicate, Istituto Salesiano Sant'Ambrogio, Milano (MI).}
 
     % Technical Skills
-    \cvsection{Technical Skills}
+    \cvsection{Technical Skills \& Soft Skills}
    
         \vspace{-0.5cm}
         \begin{cvsubsection}{blue!20}{Programming Languages}
 
-            \cvitem{VHDL}{studied in university courses, used in university projects.}
-            \cvitem{Assembly RISC-V64 / x86\_64}{studied in university courses, used in personal projects.}
-            \cvitem{C}{studied in university courses, used in university and personal projects.}
-            \cvitem{C++}{self-study starting from university basis of C, used in personal projects.}
-            \cvitem{Cuda}{studied in an extra-curricular university course, used in university projects.}            
-            \cvitem{Java}{studied in university courses, used in university and personal projects.}
-            \cvitem{Python}{studied in university courses, used in university and personal projects.}
+            \begin{minipage}[t]{0.2\textwidth}
+                \skill{C/C++}{5}
+                \skill{Java}{4}
+            \end{minipage}
+            \hspace{1 cm}
+            \begin{minipage}[t]{0.2\textwidth}
+                \skill{Cuda}{2}
+                \skill{Python}{2}
+            \end{minipage}
+            \hspace{1 cm}
+            \begin{minipage}[t]{0.25\textwidth}
+                \skill{Assembly}{3}
+                \skill{VHDL}{3}
+            \end{minipage}
+
         \end{cvsubsection}
         
-        \begin{cvsubsection}{blue!20}{Technical and Informatics Knowledge from Curricular University Courses}
-        
-            \cvitem{Operating Systems (Linux)}{basic knowledge of Linux, process and thread management, paging principles, virtual memory and file systems.}
-            \cvitem{Algorithms and Data Structures}{knowledge of data structures such as arrays, heaps, lists, hash tables, trees (BST, RBT, ...) and graphs.
-                Implementation of sorting and search algorithms, algorithm design techniques (divide et impera, greedy, dynamic programming).}
-            \cvitem{Computer Architecture}{knowledge of Assembly dialect (ISA RISC-V32), CPU operation and pipelining, memory hierarchy.}
-            \cvitem{Fundamentals of Communication and Internet}{knowledge of the TCP/IP architecture and main network protocols (HTTP, FTP, DNS, UDP, TCP, IP), IPv4/IPv6 addressing, subnetting.}
-        
+        \begin{cvsubsection}{blue!20}{Tools and Support Technologies}
+
+            \begin{minipage}[t]{0.3\textwidth}
+                \begin{itemize}
+                    \item Linux (Ubuntu, Fedora)
+                    \item Makefile · CMake
+                    \item Docker/Podman
+                \end{itemize}
+            \end{minipage}
+            \hspace{1 cm}
+            \begin{minipage}[t]{0.525\textwidth}
+                \begin{itemize}
+                    \item Git · GitHub
+                    \item Valgrind · Cachegrind · Massif · GDB
+                    \item Vivado · Vitis
+                \end{itemize}
+            \end{minipage}
+
         \end{cvsubsection}
+        
+        \begin{cvsubsection}{blue!20}{Soft Skills from Work Experiences}
 
-        \begin{cvsubsection}{blue!20}{Technical and Informatics Knowledge from Extra-Curricular University Courses}
+            \begin{itemize}
+                \item Effective Communication and Teamwork
+                \item Management of Emergencies and Decision-Making under Pressure
+                \item Accountability for own and others' safety and legal responsibilities
+                \item Supervision and Management of Customer Safety
+                \item First Aid and Defibrillator (BLSD) Certification
+            \end{itemize}
 
-            \cvitem{GPU Architecture (CUDA)}{knowledge of GPU architecture, parallel programming with CUDA, optimization of block/thread structure.}
-            \cvitem{FPGA Architecture (VHDL and HLS)}{knowledge of FPGA architecture, hardware design (VHDL) and High-Level Synthesis (HLS) via C/C++.}
-            %\cvitem{Python for Data Science and AI}{Python programming applied to Data Science and Artificial Intelligence (in particular Neural Networks).}
+        \end{cvsubsection}
+        
+        \begin{cvsubsection}{blue!20}{Technical Knowledge from University Courses}
     
-        \end{cvsubsection}
-        
-        \begin{cvsubsection}{blue!20}{Tools and Supporting Technologies}
+            Computer Architectures (RISC-V ) · Digital Logic Design · Operating Systems (Linux) \\[0.2 em]
+            Algorithms and Principles of Computer Science · Software Engineering \\ [0.2 em]
+            Fundamentals of Internet and Communication Networks · Database and Information Systems \\[0.2 em]
+            Basic Circuit Theory · Introduction to Electronics · Fundamentals of Automatic Control \\[0.4 em]
 
-            \cvitem{Git}{knowledge of Git, use for code versioning, basic knowledge of GitHub.}
-            \cvitem{Makefile, CMake}{used as tools for advanced compilation of C/C++ projects.}
-            \cvitem{Valgrind, Cachegrind, Massif, GDB}{use of support tools for advanced debugging of C/C++ code in Linux.}
-            \cvitem{LaTeX, Doxygen}{use of LaTeX (manual/generated via Doxygen) as a tool for writing documentation and reports (such as this CV).}
-            \cvitem{Vivado and Vitis}{use of Vivado and Vitis tools for synthesis (VHDL and HLS) and simulation of FPGA architecture projects.}
-            \cvitem{Docker, Podman}{creation and management of Containers using Docker/Podman, used as isolated environments and toolchains.}
-
+            GPU Architecture (CUDA) · FPGA Architecture (VHDL \& HLS) \\[0.2 em]
+    
         \end{cvsubsection}
 
     % Work Experience and Projects
-    \cvsection{Work Experience and Projects}
+    \cvsection{Work Experiences and Projects}
 
         \vspace{-0.5cm}
         \begin{cvsubsection}{blue!20}{University Projects}
 
-            \cvitem{Movhex}{development of a program that allows creating and editing a 2D hexagonal map, with the objective of finding the lowest-cost path between two points.
-                The project was fully implemented in C, using and adapting knowledge learned in the course \textit{"Algorithms and Data Structures"} at Politecnico di Milano.}
-                
+            \cvitem{\underline{\href{https://github.com/LoreDN/Movhex}{Movhex}}}{development in \textbf{C} of a program that allows creating and editing a 2D hexagonal map, with the objective of finding 
+                the lowest-cost path between two points. \\[0.2 em]
+                The final result reached a temporal complexity of $O(n \log (n))$ and spatial complexity of $O(n)$; where $n$ is the number of hexagons present in the map.}
+            \vspace{0.25 cm}
+            \cvitem{Priority-List}{design and implementation in \textbf{VHDL} of a HW module, which performs the function of a controller for a Priority-List of Tasks. \\[0.2 em]
+                The final result was implemented using a fully synthesizable FSM on an FPGA without Latches.}
+
         \end{cvsubsection}
             
         \begin{cvsubsection}{blue!20}{Personal Projects}
                 
-            \cvitem{\underline{\href{https://github.com/LoreDN/Cpp}{LDN Library}}}{personal general-purpose library implemented in C++20.}
-            \cvitem{\underline{\href{https://github.com/LoreDN/Neural-Networks}{Neural Networks}}}{from-scratch implementation of different neural networks in Python, focused on clustering various geometric shapes (circles, spirals, etc.).}
+            \cvitem{\underline{\href{https://github.com/LoreDN/Cpp}{LDN Library}}}{personal general-purpose library implemented in \textbf{C++20} using the advanced features of the language.}
+            \cvitem{\underline{\href{https://github.com/LoreDN/Neural-Networks}{Neural Networks}}}{from-scratch implementation of different neural networks in Python, focused on clustering various geometric 
+                shapes (circles, spirals, etc.).}
 
         \end{cvsubsection}
 
-        \begin{cvsubsection}{blue!20}{Work Experience}
+        \begin{cvsubsection}{blue!20}{Work Experiences}
 
             \cvitem{Lifeguard}{First aid and defibrillator (BLSD) certification, civil and criminal liability for one's actions and those of swimmers.}
                 \begin{itemize}
@@ -189,17 +240,17 @@
         \end{cvsubsection}
 
     % Language Skills
-    \pagebreak
     \cvsection{Language Skills}
 
         \cvitem{Italian}{Native speaker.}
-        \cvitem{English}{Level B2, Grade C (Cambridge FIRST Certificate).}
+        \cvitem{English}{Level C1, Grade C (Cambridge CAE Certificate).}
     
     % Certifications and Documents
+    \pagebreak
     \cvsection{Certifications and Documents {\normalsize ---> \underline{\href{https://github.com/LoreDN/LoreDN/raw/main/CV/Certifications.zip}{DOWNLOAD}}}}
 
         \cvitem{Driver's License}{Category B driver's license --- [18/11/2023]}
-        \cvitem{Cambridge FIRST Certificate}{English language certification, level B2 Grade C --- [19/05/2022]}
+        \cvitem{Cambridge CAE Certificate}{English language certification, level C1 Grade C --- [09/01/2026]}
         \cvitem{Lifeguard Certification}{award of the Lifeguard Assistant certificate (levels P, IP, MIP) at the \textit{"Federazione Italiana Nuoto" (FIN)} --- [09/11/2022]}
         \cvitem{SFA Certificate}{certificate of participation and completion of the \textit{"Scuola Formazione Animatori MGS" (SFA)} at the association \textit{"Movimento Giovanile Salesiano" (MGS)} --- [17/04/2023]}
 
