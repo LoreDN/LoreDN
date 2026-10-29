@@ -1,6 +1,7 @@
 \documentclass[a4paper, 10pt]{article}
 
 % package imports
+\usepackage{cmap}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[english]{babel}
@@ -101,7 +102,7 @@
 
 }
 
-% start of document
+% --------------- start of document ---------------
 \begin{document}
 
     % Header
@@ -115,9 +116,9 @@
             {\Large \textbf{Lorenzo Di Napoli}} \\[0.5em]
             Birth Date: 03/12/2004 \quad | \quad Address: Piazza Bernini 19, Cormano (MI) \\[0.2em]
             Email: lorenzo\_dinapoli@icloud.com \quad | \quad Tel: \texttt{+39 345 599 2100} \\[0.2em]
-            Student of Engineering of Computing Systems | \texttt{Politecnico di Milano} \\[0.2em]
+            Student of Computer Science and Engineering | \texttt{28Digital Master School} \\[0.2em]
             Linkedin: \href{https://www.linkedin.com/in/lorenzo-di-napoli-38108a340}{https://www.linkedin.com/in/lorenzo-di-napoli-38108a340} \\[0.2em]
-            Github: \href{https://github.com/LoreDN}{https://github.com/LoreDN} \\[0.2em]
+            GitHub: \href{https://github.com/LoreDN}{https://github.com/LoreDN} \\[0.2em]
 
         \end{minipage} \\
         
@@ -126,34 +127,56 @@
     % Personal Introduction
     \cvsection{Personal Introduction}
 
-        Student of Engineering of Computing Systems at Politecnico di Milano (Grade Average: 26.11/30), with skills in low-level programming (\textit{VHDL · Assembly Risc-V · C · C++ · CUDA}) 
-        and interest in embedded systems and robotics. Focused on understanding systems deeply and the influence of hardware architecture on software applications.
+        Student of Computer Science and Engineering, pursuing a double master's degree in \textbf{28Digital Master School | Intelligent Chips and Systems}, studing at the 
+        Universities of \textit{Politecnico di Milano} and \textit{Tampere University}. \\[0.2 em]
+        I am interested in embedded systems and robotics, and I developed various skills in low-level programming; my focus is on understanding systems deeply and the influence 
+        of hardware architecture on software applications.
 
     % Educational Path
     \cvsection{Educational Path}
 
-        \cvitem{2023 - expected 2026}{Bachelor's Degree in Engineering of Computing Systems, Politecnico di Milano (MI) -- Grade Average: 26.11/30.}
-        \cvitem{Extracurricular Courses}{GPU Architecture (CUDA) · FPGA Architecture (VHDL \& HLS)}
+        \cvitem{2026 - Present}{28Digital Master School | Intelligent Chips and Systems (Computer Science and Engineering), Politecnico di Milano (IT) and Tampere University (FIN)}
+        \cvitem{2023 - 2026}{Bachelor's Degree in Engineering of Computing Systems, Politecnico di Milano (MI) --- 100/110L}
         \cvitem{2018 - 2023}{High School Diploma, in Liceo Scientifico opzione Scienze Applicate, Istituto Salesiano Sant'Ambrogio, Milano (MI).}
 
+    % Language Skills
+    \cvsection{Language Skills}
+
+        \cvitem{Italian}{Native speaker.}
+        \cvitem{English}{Level C1, Grade C (Cambridge CAE Certificate).}
+
+    % Soft Skills
+    \cvsection{Soft Skills}
+
+        \begin{itemize}
+            \item Effective Communication and Teamwork
+            \item Management of Emergencies and Decision-Making under Pressure
+            \item Accountability for own and others' safety and legal responsibilities
+            \item Supervision and Management of Customer Safety
+            \item First Aid and Defibrillator (BLSD) Certification
+        \end{itemize}
+
     % Technical Skills
-    \cvsection{Technical Skills \& Soft Skills}
-   
+    \pagebreak
+    \cvsection{Technical Skills}
+
         \vspace{-0.5cm}
         \begin{cvsubsection}{blue!20}{Programming Languages}
 
-            \begin{minipage}[t]{0.2\textwidth}
-                \skill{C/C++}{5}
-                \skill{Java}{4}
-            \end{minipage}
-            \hspace{1 cm}
-            \begin{minipage}[t]{0.2\textwidth}
+            \begin{minipage}[t]{0.3\textwidth}
+                \skill{C/C++}{4}
                 \skill{Cuda}{2}
-                \skill{Python}{2}
+                \skill{HTML \& CSS}{2}
             \end{minipage}
             \hspace{1 cm}
             \begin{minipage}[t]{0.25\textwidth}
+                \skill{Java}{3}
                 \skill{Assembly}{3}
+                \skill{JavaScript}{2}
+            \end{minipage}
+            \hspace{1 cm}
+            \begin{minipage}[t]{0.25\textwidth}
+                \skill{Python}{2}
                 \skill{VHDL}{3}
             \end{minipage}
 
@@ -166,6 +189,7 @@
                     \item Linux (Ubuntu, Fedora)
                     \item Makefile · CMake
                     \item Docker/Podman
+                    \item ROS2 (Humble)
                 \end{itemize}
             \end{minipage}
             \hspace{1 cm}
@@ -173,37 +197,29 @@
                 \begin{itemize}
                     \item Git · GitHub
                     \item Valgrind · Cachegrind · Massif · GDB
+                    \item Tomcat · JavaEE Servlets · Thymeleaf · NodeJS
                     \item Vivado · Vitis
                 \end{itemize}
             \end{minipage}
 
         \end{cvsubsection}
         
-        \begin{cvsubsection}{blue!20}{Soft Skills from Work Experiences}
-
-            \begin{itemize}
-                \item Effective Communication and Teamwork
-                \item Management of Emergencies and Decision-Making under Pressure
-                \item Accountability for own and others' safety and legal responsibilities
-                \item Supervision and Management of Customer Safety
-                \item First Aid and Defibrillator (BLSD) Certification
-            \end{itemize}
-
-        \end{cvsubsection}
-        
         \begin{cvsubsection}{blue!20}{Technical Knowledge from University Courses}
     
-            Computer Architectures (RISC-V ) · Digital Logic Design · Operating Systems (Linux) \\[0.2 em]
-            Algorithms and Principles of Computer Science · Software Engineering \\ [0.2 em]
-            Fundamentals of Internet and Communication Networks · Database and Information Systems \\[0.2 em]
-            Basic Circuit Theory · Introduction to Electronics · Fundamentals of Automatic Control \\[0.4 em]
+            Computer Architectures (RISC-V) · Digital Logic Design · Operating Systems (Linux) \\[0.2 em]
+            Algorithms and Principles of Computer Science · Software Engineering \\[0.2 em]
+            Database and Information Systems · Web Technologies (Tomcat, Thymeleaf, NodeJS)\\[0.2 em]
+            Basic Circuit Theory · Introduction to Electronics \\[0.2em]
+            Fundamentals of Automatic Control · Industrial Automation · Robotics (ROS2 - Humble) \\[0.4 em]
+
+            Economics \& Business Administration \\[0.4 em]
 
             GPU Architecture (CUDA) · FPGA Architecture (VHDL \& HLS) \\[0.2 em]
     
         \end{cvsubsection}
 
-    % Work Experience and Projects
-    \cvsection{Work Experiences and Projects}
+    % Projects
+    \cvsection{Projects}
 
         \vspace{-0.5cm}
         \begin{cvsubsection}{blue!20}{University Projects}
@@ -213,44 +229,48 @@
                 The final result reached a temporal complexity of $O(n \log (n))$ and spatial complexity of $O(n)$; where $n$ is the number of hexagons present in the map.}
             \vspace{0.25 cm}
             \cvitem{Priority-List}{design and implementation in \textbf{VHDL} of a HW module, which performs the function of a controller for a Priority-List of Tasks. \\[0.2 em]
-                The final result was implemented using a fully synthesizable FSM on an FPGA without Latches.}
+                The final result was implemented via a fully synthesizable FSM on an FPGA, without Latches of any kind.}
+            \vspace{0.25 cm}
+            \cvitem{\underline{\href{https://github.com/IS26-AM30organization/IS26-AM30}{Mesos}}}{design, implementation, testing and deployment of an Online Game-App based on the board game "Mesos", fully realized 
+                in \textbf{JavaEE} and distributed via \textbf{jar} packages. \\[0.2 em]
+                The full Project was realized by a team of 4 people, and its implementation supports \textit{TUI/GUI} layouts, and \textit{Socket/RMI} communication protocols.}
 
         \end{cvsubsection}
             
         \begin{cvsubsection}{blue!20}{Personal Projects}
-                
+
+            \cvitem{\underline{\href{https://github.com/ldn-homelab}{Home Server}}}{Self-hosted personal server running various services (including \textit{Nextcloud} and \textit{Immich}) in rootless containers, each one isolated with its own dedicated UID/GID range. \\[0.2 em]
+                Services are reachable only over a \textit{WireGuard} VPN, with \textit{Caddy} handling HTTPS reverse-proxying for distributed architectures and \textit{dnsmasq} providing local DNS. \\[0.2 em]
+                Currently building a dedicated backup NAS: a 5-drive RAID 6 array managed via \textit{mdadm} software RAID, behind an HBA configured in IT mode.}
             \cvitem{\underline{\href{https://github.com/LoreDN/Cpp}{LDN Library}}}{personal general-purpose library implemented in \textbf{C++20} using the advanced features of the language.}
-            \cvitem{\underline{\href{https://github.com/LoreDN/Neural-Networks}{Neural Networks}}}{from-scratch implementation of different neural networks in Python, focused on clustering various geometric 
+            \cvitem{\underline{\href{https://github.com/LoreDN/Neural-Networks}{Neural Networks}}}{from-scratch implementation of different neural networks in \textbf{Python} and \textbf{Jupyter Notebook}, focused on clustering various geometric 
                 shapes (circles, spirals, etc.).}
 
         \end{cvsubsection}
 
-        \begin{cvsubsection}{blue!20}{Work Experiences}
+    % Work Experiences
+    \cvsection{Work Experiences}
 
-            \cvitem{Lifeguard}{First aid and defibrillator (BLSD) certification, civil and criminal liability for one's actions and those of swimmers.}
-                \begin{itemize}
-
-                    \renewcommand{\labelitemi}{-}
-                    \item \textbf{June 2025 - December 2025 [116 hours]:} Summer and winter work experience as Lifeguard Assistant P at the sports center \textit{"M.G.M.Sport Srl"} in Paderno Dugnano (MI).
-                    \item \textbf{June 2024 - July 2024 [171 hours]:} Summer work experience as Lifeguard Assistant P at the sports center \textit{"M.G.M.Sport Srl"} in Paderno Dugnano (MI).
-                    \item \textbf{July 2022 [36.5 hours]:} Summer work experience as Lifeguard Assistant P at the sports center \textit{"M.G.M. Sport Srl"} in Desio (MB). 
+        \begin{cvsubsection}{blue!20}{Lifeguard}
             
-                \end{itemize}
+            First aid and defibrillator (BLSD) certification, civil and criminal liability for one's actions and those of swimmers.
+            \begin{itemize}
+                
+                \renewcommand{\labelitemi}{-}
+                \item \textbf{June 2025 - December 2025 [116 hours]:} Summer and winter work experience as Lifeguard Assistant P at the sports center \textit{"M.G.M.Sport Srl"} in Paderno Dugnano (MI).
+                \item \textbf{June 2024 - July 2024 [171 hours]:} Summer work experience as Lifeguard Assistant P at the sports center \textit{"M.G.M.Sport Srl"} in Paderno Dugnano (MI).
+                \item \textbf{July 2022 [36.5 hours]:} Summer work experience as Lifeguard Assistant P at the sports center \textit{"M.G.M. Sport Srl"} in Desio (MB). 
+                
+            \end{itemize}
 
         \end{cvsubsection}
-
-    % Language Skills
-    \cvsection{Language Skills}
-
-        \cvitem{Italian}{Native speaker.}
-        \cvitem{English}{Level C1, Grade C (Cambridge CAE Certificate).}
     
     % Certifications and Documents
-    \pagebreak
     \cvsection{Certifications and Documents {\normalsize ---> \underline{\href{https://github.com/LoreDN/LoreDN/raw/main/CV/Certifications.zip}{DOWNLOAD}}}}
 
-        \cvitem{Driver's License}{Category B driver's license --- [18/11/2023]}
+        \cvitem{Bachelor's Degree}{awarded in Computer Science and Engineering, final grade 100/110L --- [29/09/2026]}
         \cvitem{Cambridge CAE Certificate}{English language certification, level C1 Grade C --- [09/01/2026]}
+        \cvitem{Driver's License}{Category B driver's license --- [18/11/2023]}
         \cvitem{Lifeguard Certification}{award of the Lifeguard Assistant certificate (levels P, IP, MIP) at the \textit{"Federazione Italiana Nuoto" (FIN)} --- [09/11/2022]}
         \cvitem{SFA Certificate}{certificate of participation and completion of the \textit{"Scuola Formazione Animatori MGS" (SFA)} at the association \textit{"Movimento Giovanile Salesiano" (MGS)} --- [17/04/2023]}
 

@@ -1,6 +1,7 @@
 \documentclass[a4paper, 10pt]{article}
 
 % importazione dei pacchetti
+\usepackage{cmap}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[italian]{babel}
@@ -101,7 +102,7 @@
 
 }
 
-% inizio del documento
+% --------------- inizio del documento ---------------
 \begin{document}
 
     % Intestazione
@@ -115,9 +116,9 @@
             {\Large \textbf{Lorenzo Di Napoli}} \\[0.5em]
             Data di nascita: 03/12/2004 \quad | \quad Indirizzo: Piazza Bernini 19, Cormano (MI) \\[0.2em]
             Email: lorenzo\_dinapoli@icloud.com \quad | \quad Tel: \texttt{+39 345 599 2100} \\[0.2em]
-            Studente di Ingegneria Informatica | \texttt{Politecnico di Milano} \\[0.2em]
+            Studente di Computer Science and Engineering | \texttt{28Digital Master School} \\[0.2em]
             Linkedin: \href{https://www.linkedin.com/in/lorenzo-di-napoli-38108a340}{https://www.linkedin.com/in/lorenzo-di-napoli-38108a340} \\[0.2em]
-            Github: \href{https://github.com/LoreDN}{https://github.com/LoreDN} \\[0.2em]
+            GitHub: \href{https://github.com/LoreDN}{https://github.com/LoreDN} \\[0.2em]
 
         \end{minipage} \\
         
@@ -126,34 +127,56 @@
     % Introduzione Personale
     \cvsection{Introduzione Personale}
 
-        Studente di Ingegneria Informatica al Politecnico di Milano (media: 26.11/30), con competenze in programmazione low-level (\textit{VHDL · Assembly Risc-V · C · C++ · CUDA}) 
-        e interesse per sistemi embedded e robotica. Orientato alla comprensione profonda dei sistemi, e dell'influenza che l'architettura hardware esercita sul software applicativo.
+        Studente di Computer Science and Engineering, iscritto presso \texttt{28Digital Master School | Intelligent Chips and Systems}; studente presso le 
+        Università di \textit{Politecnico di Milano} e \textit{Tampere University}. \\[0.2 em]
+        Nutro interesse per sistemi embedded e per la robotica, ho appreso varie competenze in programmazione low-level; sono orientato alla comprensione profonda 
+        dei sistemi, e dell'influenza che l'architettura hardware esercita sul software applicativo.
 
     % Percorso di studi
     \cvsection{Percorso di Studi}
 
-        \cvitem{2023 - previsto 2026}{Laurea Triennale in Ingegneria Informatica, Politecnico di Milano (MI) --- media attuale: 26.11/30.}
-        \cvitem{Corsi Extracurriculari}{Architettura GPU (CUDA) · Architettura FPGA (VHDL \& HLS)}
+        \cvitem{2026 - Present}{28Digital Master School | Intelligent Chips and Systems (Computer Science and Engineering), Politecnico di Milano (IT) e Tampere University (FIN)}
+        \cvitem{2023 - 2026}{Laurea Triennale in Ingegneria Informatica, Politecnico di Milano (MI) --- 100/110L}
         \cvitem{2018 - 2023}{Diploma di Maturità presso Liceo Scientifico opzione Scienze Applicate, Istituto Salesiano Sant'Ambrogio, Milano (MI).}
 
-    % Competenze Tecniche & Soft Skills
-    \cvsection{Competenze Tecniche \& Soft Skills}
-   
+    % Conoscenze linguistiche
+    \cvsection{Conoscenze Linguistiche}
+
+        \cvitem{Italiano}{Madrelingua.}
+        \cvitem{Inglese}{Livello C1, Grado C (Certificazione CAE Cambridge).}
+
+    % Soft Skills
+    \cvsection{Soft Skills}
+
+        \begin{itemize}
+            \item Comunicazione efficace e lavoro di squadra
+            \item Gestione dell'emergenza e decision-making sotto pressione
+            \item Presa della Responsabilità Civile e Penale delle proprie azioni e di quelle altrui
+            \item Supervisione e Gestione della sicurezza dei clienti
+            \item Abilitazione al Primo Soccorso (BLSD)
+        \end{itemize}
+
+    % Competenze Tecniche
+    \pagebreak
+    \cvsection{Competenze Tecniche}
+
         \vspace{-0.5cm}
         \begin{cvsubsection}{blue!20}{Linguaggi di Programmazione}
 
-            \begin{minipage}[t]{0.2\textwidth}
-                \skill{C/C++}{5}
-                \skill{Java}{4}
-            \end{minipage}
-            \hspace{1 cm}
-            \begin{minipage}[t]{0.2\textwidth}
+            \begin{minipage}[t]{0.3\textwidth}
+                \skill{C/C++}{4}
                 \skill{Cuda}{2}
-                \skill{Python}{2}
+                \skill{HTML \& CSS}{2}
             \end{minipage}
             \hspace{1 cm}
             \begin{minipage}[t]{0.25\textwidth}
+                \skill{Java}{3}
                 \skill{Assembly}{3}
+                \skill{JavaScript}{2}
+            \end{minipage}
+            \hspace{1 cm}
+            \begin{minipage}[t]{0.25\textwidth}
+                \skill{Python}{2}
                 \skill{VHDL}{3}
             \end{minipage}
 
@@ -166,6 +189,7 @@
                     \item Linux (Ubuntu, Fedora)
                     \item Makefile · CMake
                     \item Docker/Podman
+                    \item ROS2 (Humble)
                 \end{itemize}
             \end{minipage}
             \hspace{1 cm}
@@ -173,37 +197,29 @@
                 \begin{itemize}
                     \item Git · GitHub
                     \item Valgrind · Cachegrind · Massif · GDB
+                    \item Tomcat · JavaEE Servlets · Thymeleaf · NodeJS
                     \item Vivado · Vitis
                 \end{itemize}
             \end{minipage}
 
         \end{cvsubsection}
         
-        \begin{cvsubsection}{blue!20}{Soft Skills da Esperienze Lavorative}
-
-            \begin{itemize}
-                \item Comunicazione efficace e lavoro di squadra
-                \item Gestione dell'emergenza e decision-making sotto pressione
-                \item Presa della Responsabilità Civile e Penale delle proprie azioni e di quelle altrui
-                \item Supervisione e Gestione della sicurezza dei clienti
-                \item Abilitazione al Primo Soccorso (BLSD)
-            \end{itemize}
-
-        \end{cvsubsection}
-        
         \begin{cvsubsection}{blue!20}{Conoscenze Tecniche a partire da corsi universitari}
-    
-            Architettura dei Calcolatori (RISC-V ) · Reti Logiche · Sistemi Operativi (Linux) \\[0.2 em]
+            
+            Architettura dei Calcolatori (RISC-V) · Reti Logiche · Sistemi Operativi (Linux) \\[0.2 em]
             Algoritmi e Principi dell'Informatica · Ingegneria del Software \\ [0.2 em]
-            Fondamenti di Comunicazione e Internet · Database e Sistemi Informativi \\[0.2 em]
-            Elettrotecnica · Fondamenti di Elettronica · Fondamenti di Automatica \\[0.4 em]
+            Database e Sistemi Informativi · Tecnologie Web (Tomcat, Thymeleaf, NodeJS)\\[0.2 em]
+            Elettrotecnica · Fondamenti di Elettronica \\[0.4 em]
+            Fondamenti di Automatica · Automazione Industriale · Robotica (ROS2 - Humble) \\[0.4 em]
+            
+            Economia \& Organizzazione Aziendale \\[0.4 em]
 
             Architettura GPU (CUDA) · Architettura FPGA (VHDL \& HLS) \\[0.2 em]
     
         \end{cvsubsection}
 
-    % Esperienze lavorative
-    \cvsection{Esperienze lavorative e Progetti}
+    % Progetti
+    \cvsection{Progetti}
 
         \begin{cvsubsection}{blue!20}{Progetti universitari}
 
@@ -212,44 +228,50 @@
                 minor costo tra due punti di essa. \\[0.2 em]
                 Il risultato finale ha raggiunto una complessità temporale di $O(n \log (n))$ e spaziale di $O(n)$; dove $n$ è il numero di esagoni presenti nella mappa.}
             \vspace{0.25 cm}
-                \cvitem{Priority-List}{design ed implementazione in \textbf{VHDL} di un modulo HW, il quale svolge la funzione di controllore per una Lista con priorità di Task. \\[0.2 em]
+            \cvitem{Priority-List}{design ed implementazione in \textbf{VHDL} di un modulo HW, il quale svolge la funzione di controllore per una Lista con priorità di Task. \\[0.2 em]
                 Il risultato finale è stato implementato mediante una FSM totalmente sintetizzabile su FPGA senza Latch.}
+            \vspace{0.25 cm}
+            \cvitem{\underline{\href{https://github.com/IS26-AM30organization/IS26-AM30}{Mesos}}}{design, implementazione, testing e deployment di una Game-App Online basata sul gioco da tavola "Mesos", realizzata interamente 
+                in \textbf{JavaEE} e distribuita via pacchetti \textbf{jar}. \\[0.2 em]
+                Il progetto nel suo insieme è stato realizzato da un team di 4 persone, e la sua implementazione supporta layout \textit{TUI/GUI} e protocolli di comunicazione \textit{Socket/RMI}.}
+
                 
         \end{cvsubsection}
             
         \begin{cvsubsection}{blue!20}{Progetti personali}
                 
+            \cvitem{\underline{\href{https://github.com/ldn-homelab}{Home Server}}}{server personale Self-hosted che gestisce vari servizi (tra cui \textit{Nextcloud} e \textit{Immich}) in containers rootless, ognuno dei quali isolato con il proprio range di UID/GID. \\[0.2 em]
+                I servizi sono accessibili solo tramite una VPN \textit{WireGuard}, con \textit{Caddy} che gestisce il reverse-proxying HTTPS su architettura distribuita e \textit{dnsmasq} che fornisce il DNS locale. \\[0.2 em]
+                Attualmente in costruzione un NAS di backup dedicato: un array RAID 6 a 5 dischi gestito via \textit{mdadm} software RAID, dietro un HBA configurato in modalità IT.}
             \cvitem{\underline{\href{https://github.com/LoreDN/Cpp}{LDN Library}}}{libreria personale general purpose, implementata in \textbf{C++20} sfruttando le funzionalità avanzate del linguaggio.}
             \cvitem{\underline{\href{https://github.com/LoreDN/Neural-Networks}{Neural Networks}}}{implementazione from-scratch di differenti reti neurali in Python, incentrate sul clustering di diverse figure geometriche 
                 (cerchi, spirali, ecc.).}
 
         \end{cvsubsection}
 
-        \begin{cvsubsection}{blue!20}{Esperienze lavorative}
+    % Esperienze lavorative
+    \cvsection{Esperienze lavorative}
 
-            \cvitem{Assistente Bagnanti}{Abilitazione al primo soccorso e all'uso del defibrillatore (BLSD), responsabilità civile e penale delle proprie azioni e di quelle dei bagnanti.}
-                \begin{itemize}
+        \begin{cvsubsection}{blue!20}{Assistente Bagnanti}
 
-                    \renewcommand{\labelitemi}{-}
-                    \item \textbf{giugno 2025 - dicembre 2025 [116 ore]:} esperienza lavorativa estiva e invernale come Assistente Bagnanti P, svolta presso il centro sportivo \textit{"M.G.M.Sport Srl"} di Paderno Dugnano (MI).
-                    \item \textbf{giugno 2024 - luglio 2024 [171 ore]:} esperienza lavorativa estiva come Assistente Bagnanti P, svolta presso il centro sportivo \textit{"M.G.M.Sport Srl"} di Paderno Dugnano (MI).
-                    \item \textbf{luglio 2022 [36.5 ore]:} esperienza lavorativa estiva come Assistente Bagnanti P, svolta presso il centro sportivo \textit{"M.G.M. Sport Srl"} di Desio (MB). 
+            Abilitazione al primo soccorso e all'uso del defibrillatore (BLSD), responsabilità civile e penale delle proprie azioni e di quelle dei bagnanti.
+            \begin{itemize}
+
+                \renewcommand{\labelitemi}{-}
+                \item \textbf{giugno 2025 - dicembre 2025 [116 ore]:} esperienza lavorativa estiva e invernale come Assistente Bagnanti P, svolta presso il centro sportivo \textit{"M.G.M.Sport Srl"} di Paderno Dugnano (MI).
+                \item \textbf{giugno 2024 - luglio 2024 [171 ore]:} esperienza lavorativa estiva come Assistente Bagnanti P, svolta presso il centro sportivo \textit{"M.G.M.Sport Srl"} di Paderno Dugnano (MI).
+                \item \textbf{luglio 2022 [36.5 ore]:} esperienza lavorativa estiva come Assistente Bagnanti P, svolta presso il centro sportivo \textit{"M.G.M. Sport Srl"} di Desio (MB). 
             
-                \end{itemize}
+            \end{itemize}
 
         \end{cvsubsection}
-
-    % Conoscenze linguistiche
-    \cvsection{Conoscenze Linguistiche}
-
-        \cvitem{Italiano}{Madrelingua.}
-        \cvitem{Inglese}{Livello C1, Grado C (Certificazione CAE Cambridge).}
     
     % Certificazioni e Documenti
     \cvsection{Certificazioni e Documenti {\normalsize ---> \underline{\href{https://github.com/LoreDN/LoreDN/raw/main/CV/Certifications.zip}{DOWNLOAD}}}}
 
-        \cvitem{Patente di guida}{Patente di guida di tipo B --- [18/11/2023]}
+        \cvitem{Laurea Triennale}{conseguita in Ingegneria Informatica, voto finale 100/110L --- [29/09/2026]}
         \cvitem{Certificazione CAE Cambridge}{Certificazione di lingua inglese, livello C1 Grado C --- [09/01/2026]}
+        \cvitem{Patente di guida}{Patente di guida di tipo B --- [18/11/2023]}
         \cvitem{Brevetto di Assistente Bagnanti}{conseguimento del brevetto di Assistente Bagnanti (livelli P, IP, MIP) presso \textit{"Federazione Italiana Nuoto" (FIN)} --- [09/11/2022]}
         \cvitem{Attestato SFA}{attestato di partecipazione e superamento della \textit{"Scuola Formazione Animatori MGS" (SFA)} presso l'associazione \textit{"Movimento Giovanile Salesiano" (MGS)} --- [17/04/2023]}
 
